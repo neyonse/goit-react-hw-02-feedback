@@ -1,0 +1,11 @@
+.feedbackOptions {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  width: fit-content;
+  margin: 24px auto 0;
+}
+
+.feedbackOptionsItem {
+  cursor: pointer;
+}

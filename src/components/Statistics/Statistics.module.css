@@ -1,0 +1,38 @@
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.statsList {
+  display: flex;
+  gap: 24px;
+  margin: 0 auto;
+}
+
+.statsItem {
+}
+
+.statsTotal {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.statsTotal > span {
+  margin-top: 12px;
+}
+
+.statsPersantage {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.statsPersantage > span {
+  margin-top: 12px;
+}
