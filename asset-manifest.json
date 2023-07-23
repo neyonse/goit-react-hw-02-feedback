@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-02-feedback/static/css/main.97edc58f.css",
-    "main.js": "/goit-react-hw-02-feedback/static/js/main.36b368b6.js",
+    "main.css": "/goit-react-hw-02-feedback/static/css/main.c71eabe3.css",
+    "main.js": "/goit-react-hw-02-feedback/static/js/main.aaa803dd.js",
     "static/media/Montserrat-Bold.ttf": "/goit-react-hw-02-feedback/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
     "static/media/Montserrat-Regular.ttf": "/goit-react-hw-02-feedback/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
     "index.html": "/goit-react-hw-02-feedback/index.html",
-    "main.97edc58f.css.map": "/goit-react-hw-02-feedback/static/css/main.97edc58f.css.map",
-    "main.36b368b6.js.map": "/goit-react-hw-02-feedback/static/js/main.36b368b6.js.map"
+    "main.c71eabe3.css.map": "/goit-react-hw-02-feedback/static/css/main.c71eabe3.css.map",
+    "main.aaa803dd.js.map": "/goit-react-hw-02-feedback/static/js/main.aaa803dd.js.map"
   },
   "entrypoints": [
-    "static/css/main.97edc58f.css",
-    "static/js/main.36b368b6.js"
+    "static/css/main.c71eabe3.css",
+    "static/js/main.aaa803dd.js"
   ]
 }
