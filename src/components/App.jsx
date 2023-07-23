@@ -1,24 +1,15 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Section } from 'components/Section/Section';
 import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
 import { Statistics } from 'components/Statistics/Statistics';
+import { Notification } from 'components/Notification/Notification';
 
 export class App extends Component {
-  // static defaultProps = {
-  //   good: 0,
-  //   neutral: 0,
-  //   bad: 0,
-  // };
-
-  constructor() {
-    super();
-
-    this.state = {
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    };
-  }
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
 
   handleClick = option => {
     this.setState(prevState => ({ [option]: prevState[option] + 1 }));
@@ -26,18 +17,24 @@ export class App extends Component {
 
   countTotalFeedback() {
     const { good, neutral, bad } = this.state;
-
     return good + neutral + bad;
   }
 
   countPositiveFeedbackPercentage() {
-    const { good, bad } = this.state;
-
-    return Math.round((good / (good + bad)) * 100);
+    const { good, neutral, bad } = this.state;
+    return Math.round((good / (good + neutral * 0.5 + bad)) * 100);
   }
 
   render() {
     const { good, neutral, bad } = this.state;
+    const total = this.countTotalFeedback();
+    const propsStatistics = {
+      good,
+      neutral,
+      bad,
+      total,
+      positivePercentage: this.countPositiveFeedbackPercentage(),
+    };
 
     return (
       <div className="main-wrapper">
@@ -48,13 +45,11 @@ export class App extends Component {
           />
         </Section>
         <Section title="Statistics">
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={this.countTotalFeedback()}
-            positivePercentage={this.countPositiveFeedbackPercentage()}
-          />
+          {total === 0 ? (
+            <Notification message="There is no feedback" />
+          ) : (
+            <Statistics props={propsStatistics} />
+          )}
         </Section>
       </div>
     );
